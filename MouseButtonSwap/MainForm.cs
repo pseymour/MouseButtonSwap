@@ -29,7 +29,12 @@ namespace MouseButtonSwap
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SwapMouseButton(bool swap);
 
-        private void SwapButtonMouseUp(object sender, MouseEventArgs e)
+        /// <summary>
+        /// This function handles the Click event for the swap button.
+        /// </summary>
+        /// <param name="sender">The button being clicked.</param>
+        /// <param name="e">Data specific to the event.</param>
+        private void SwapButtonClick(object sender, System.EventArgs e)
         {
             SwapMouseButton(!System.Windows.Forms.SystemInformation.MouseButtonsSwapped);
             this.ConfigureUIElements();
@@ -54,6 +59,5 @@ namespace MouseButtonSwap
                 this.statusLabel.Text = "Mouse is right-handed.";
             }
         }
-
     }
 }

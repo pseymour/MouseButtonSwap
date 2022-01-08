@@ -65,7 +65,7 @@ namespace MouseButtonSwap
             this.btnSwap.TabIndex = 0;
             this.btnSwap.Text = "&Swap";
             this.btnSwap.UseVisualStyleBackColor = true;
-            this.btnSwap.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SwapButtonMouseUp);
+            this.btnSwap.Click += new System.EventHandler(this.SwapButtonClick);
             // 
             // mousePicture
             // 
